@@ -24,6 +24,7 @@ public class LoanController {
         return new ResponseEntity<>(
                 loanService.calculateLoanInquiry(calculateLoanRequestDto),
                 HttpStatus.OK);
+
     }
 
 }
