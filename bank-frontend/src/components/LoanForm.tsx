@@ -2,13 +2,13 @@ import React, {HTMLProps, useState} from 'react';
 import { CalculateLoanRequestDto} from "../models/loan/CalculateLoanRequestDto";
 import { calculateLoan } from '../services/LoanService';
 
-type Props = {
+type LoanFormProps = {
     showForm: boolean,
     message: string
 }
 
-const LoanForm = (props : Props) => {
-    if(props.showForm) {
+const LoanForm = ({showForm, message = "Default Message"} : LoanFormProps) => {
+    if(showForm) {
         return (
             <form className='input'>
                 <label htmlFor='requested-amount' >Amount</label>
